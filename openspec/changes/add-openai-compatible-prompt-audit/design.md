@@ -745,7 +745,7 @@ prompt_audit.events_filter_deleted
 
 ## Resolved Decisions
 
-1. **源基线标识**：采用 `source-freeze/` 中的只读 tracked patch + untracked archive；base commit、SHA-256 和恢复测试已登记在 `source-baseline.md`。
+1. **源基线标识**：参考源仓库的 commit、变更范围和历史验证结果登记在 `source-baseline.md`；外部冻结归档不随本仓库存储。
 2. **事件自动保留期**：第一版只提供管理员安全删除，不增加自动保留清理；真实事件量稳定后另起 change。
 3. **同步两个引擎并行或串行**：采用受控并行；实现必须通过 race test，并保持 Legacy Block 优先级和两引擎独立记录。
 4. **目标项目额外文本入口**：以实施时 `backend/internal/server/routes/gateway.go` 的自动/结构枚举为事实源；所有用户文本入口必须接入 Coordinator 或提供不会旁路/重复扫描的测试证明。

@@ -4,7 +4,7 @@
 
 本表用于证明“完整功能都必须要有”不是一句笼统目标。每个 AICodex 当前用户可见或运行时能力都必须映射到目标 Requirement、预期代码位置和验证证据；实施中发现新源能力时，先更新本表和相关 spec/tasks，再编码。
 
-源参考状态见 `source-baseline.md`。只读冻结包已在 detached worktree 中恢复，以下测试在恢复副本执行：
+源参考状态见 `source-baseline.md`。外部冻结包不随本仓库存储，以下测试结果保留为历史参考：
 
 ```text
 cd /Users/mt/code/mt-ai/aicodex/aicodex-api/ai-gateway
@@ -18,7 +18,7 @@ ok github.com/mt21625457/aicodex/internal/relay 2.201s
 ok github.com/mt21625457/aicodex/internal/gatewayadapter/transport 3.233s
 ```
 
-这证明冻结包可恢复且源参考测试通过，但不证明目标实现已完成；目标代码和证据仍须逐行补齐。
+这些结果仅证明历史参考实现曾通过对应测试，不证明目标实现已完成；目标代码和证据仍须逐行补齐。
 
 ## 2. 功能映射
 

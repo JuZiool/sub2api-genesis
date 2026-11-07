@@ -2,16 +2,11 @@
 
 This file records reproducible implementation-time evidence. It contains no prompt bodies, Guard credentials, Authorization values, or Redis payloads.
 
-## 2026-07-16 — source freeze and target baseline
+## 2026-07-16 — target baseline
 
-### Frozen source restore
+### External source reference
 
-- Base commit: `7a50378851a80650cb0c086260b23abeb3469e6b`
-- Freeze manifest: `source-freeze/MANIFEST.md`
-- Manifest SHA-256: `badab312bf6af4d2c77857a9400381f4da4fbf45722d9f4a6df23bc7005273b6`
-- Restore result: tracked patch and untracked archive restored into a detached worktree; `git diff --check` passed.
-- `go test ./internal/service/promptaudit -count=1`: passed.
-- `go test ./internal/router ./internal/relay ./internal/gatewayadapter/transport -run 'PromptGuard|PromptAudit|ConcurrencyOrder' -count=1`: passed.
+The external AICodex source-freeze archive is intentionally excluded from this repository. The source repository, commit and historical verification details remain documented in `source-baseline.md`; the target implementation is the authoritative code for this project.
 
 ### Target pre-change baseline
 
